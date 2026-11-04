@@ -6,7 +6,7 @@ gene_dna <- function(length, base_probs = c(0.25, 0.25, 0.25, 0.25)){
   if( length %% 3 != 0 ){
     stop("The argument to the parameter 'l' has to be divisible by 3")
   }
-  if (abs(sum(base_probs)) > 1e-10) {
+  if (abs(sum(base_probs)-1) > 1e-10) {
     stop("The probabilities do NOT sum to 1")
   }
   

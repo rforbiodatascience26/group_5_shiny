@@ -59,5 +59,27 @@ ui <- page_fluid(
       mainPanel(
         verbatimTextOutput(outputId = "dna")
       )
-    ))
+    )),
+  layout_columns(
+    col_widths = 12,
+    card(
+      card_header("RNA polymerase"),
+      # first argument -> ID: name that server uses, second argument -> label of the button
+      actionButton(inputId = "button", label ="Convert to RNA"),
+      mainPanel(
+        verbatimTextOutput(outputId = "rna")
+      )
+    )
+  )
+  # layout_columns(
+  #   col_widths = 12,
+  #   card(
+  #     card_header("RNA polymerase"),
+  # 
+  #     actionButton(inputId = "button2", label ="Show the protein"),
+  #     mainPanel(
+  #       verbatimTextOutput(outputId = "protein")
+  #     )
+  #   )
+  # )
 )
