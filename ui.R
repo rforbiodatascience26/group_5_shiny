@@ -29,38 +29,64 @@ ui <- page_fluid(
                   width = "100%"),
       layout_columns(
         col_widths = c(3, 3, 3, 3),
-        numericInput("prob_A", "Probability of A", value = 0.25, min = 0, max = 1, step = 0.05),
-        numericInput("prob_T", "Probability of T", value = 0.25, min = 0, max = 1, step = 0.05),
-        numericInput("prob_C", "Probability of C", value = 0.25, min = 0, max = 1, step = 0.05),
-        numericInput("prob_G", "Probability of G", value = 0.25, min = 0, max = 1, step = 0.05)
+        numericInput("prob_A", 
+                     "Probability of A", 
+                     value = 0.25, 
+                     min = 0, 
+                     max = 1, 
+                     step = 0.05),
+        numericInput("prob_T", 
+                     "Probability of T", 
+                     value = 0.25, 
+                     min = 0, 
+                     max = 1, 
+                     step = 0.05),
+        numericInput("prob_C", 
+                     "Probability of C", 
+                     value = 0.25, 
+                     min = 0, 
+                     max = 1, 
+                     step = 0.05),
+        numericInput("prob_G", 
+                     "Probability of G", 
+                     value = 0.25, 
+                     min = 0, 
+                     max = 1, 
+                     step = 0.05)
       ),
-      actionButton("generate", "Generate gene", class = "btn-primary"),
+      actionButton("generate", "Generate gene", 
+                   class = "btn-primary"),
       verbatimTextOutput(outputId = "dna")
     )),
   
-  # ---- 2. Transcription ----
+  # Transcription
   layout_columns(
     col_widths = 12,
     card(
       card_header("2. Virtual RNA polymerase (transcription)"),
-      textAreaInput("dna_in", "Paste DNA here:", width = "100%", rows = 2),
+      textAreaInput("dna_in", "Paste DNA here:", 
+                    width = "100%", 
+                    rows = 2),
       verbatimTextOutput(outputId = "rna")
     )),
   
-  # ---- 3. Translation ----
+  # Translation
   layout_columns(
     col_widths = 12,
     card(
       card_header("3. Virtual Ribosome (translation)"),
-      textAreaInput("rna_in", "Paste RNA here:", width = "100%", rows = 2),
+      textAreaInput("rna_in", "Paste RNA here:", 
+                    width = "100%", 
+                    rows = 2),
       verbatimTextOutput(outputId = "protein")
     )),
   
-  # ---- 4. Analysis (optional) ----
+  # Analysis (optional)
   layout_columns(
     col_widths = 12,
     card(
       card_header("4. Nucleotide frequencies"),
-      plotOutput(outputId = "base_plot", height = "250px")
+      plotOutput(outputId = "base_plot", 
+                 height = "250px")
     ))
 )

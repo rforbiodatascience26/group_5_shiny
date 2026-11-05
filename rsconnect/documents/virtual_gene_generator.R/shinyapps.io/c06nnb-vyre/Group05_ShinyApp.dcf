@@ -1,12 +1,12 @@
-name: Shinyapp-MATT
-title: Shinyapp-MATT
+name: Group05_ShinyApp
+title: Group05_ShinyApp
 username: c06nnb-vyre
 account: c06nnb-vyre
 server: shinyapps.io
 hostUrl: https://api.shinyapps.io/v1
-appId: 18369176
-bundleId: 12783546
-url: https://c06nnb-vyre.shinyapps.io/Shinyapp-MATT/
+appId: 18371370
+bundleId: 12784354
+url: https://c06nnb-vyre.shinyapps.io/Group05_ShinyApp/
 version: 1
 asMultiple: FALSE
 asStatic: FALSE
