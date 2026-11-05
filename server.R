@@ -1,8 +1,5 @@
 # Load needed functions
 source(file = "app_functions.R")
-
-# Load needed functions
-source(file = "app_functions.R")
 library("ggplot2")
 
 # Define the Server (Backend)
