@@ -36,7 +36,7 @@ server <- function(input, output) {
   # Base frequency plot (on the generated DNA)
   output$base_plot <- renderPlot({
     df <- base_freqs(dna_seq())
-    ggplot(df, aes(x = Base, y = Freq, fill = Base)) +
+    ggplot(df, aes(x = dna_vec, y = Freq, fill = dna_vec)) +
       geom_col(show.legend = FALSE) +
       labs(x = "Nucleotide", y = "Count") +
       theme_minimal()
